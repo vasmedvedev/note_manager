@@ -213,7 +213,6 @@ var grid = new Ext.grid.GridPanel({
                                 param = 'title';
                         }
                         mystore.filter(param, this.getValue(), true, false);
-//                        console.log(grid.getBottomToolbar().getComponent(1).getValue());
                         }
                     }
                 }
