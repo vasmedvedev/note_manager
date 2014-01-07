@@ -1,0 +1,16 @@
+{% extends "accounts_base.html" %}
+{% block title %}Edit note{% endblock %}
+{% block head %}
+<script src='/static/accounts/edit_note.js'></script>
+<script>var username = "{{ username }}";
+        var uuid = "{{ uuid }}";
+        var text = "{{text}}";
+        var title = "{{ title }}";
+        var category = "{{ category }}";
+</script>
+{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<div id="edit_note">
+</div>
+{% endblock %}

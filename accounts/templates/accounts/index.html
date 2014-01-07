@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Accounts Home Page{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/account.css' %}" />
+<div class="login_box" id="loginform">
+</div>
+<script src='/static/accounts/accounts.js'></script>
+{% endblock %}

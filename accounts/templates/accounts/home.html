@@ -1,0 +1,37 @@
+{% extends "accounts_base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block head %}
+<script src='/static/accounts/home.js'></script>
+<script>var username = "{{ username }}";</script>
+<style type=text/css>
+
+        .x-action-col-cell img.filled {
+            height: 16px;
+            width: 16px;
+            background-image: url(../static/accounts/star.png);
+        }
+
+        .x-action-col-cell img.empty {
+            height: 16px;
+            width: 16px;
+            background-image: url(../static/accounts/empty_star.png);
+        }
+
+        .x-action-col-cell img.published {
+            height: 16px;
+            width: 16px;
+            background-image: url(../static/accounts/lightbulb.png);
+        }
+
+        .x-action-col-cell img.not_published {
+            height: 16px;
+            width: 16px;
+            background-image: url(../static/accounts/lightbulb_off.png);
+        }
+</style>
+{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<div id="notes">
+</div>
+{% endblock %}

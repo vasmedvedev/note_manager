@@ -1,0 +1,18 @@
+{% extends "accounts_base.html" %}
+{% block title %}Note{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/account.css' %}" />
+<div id="published_note">
+</div>
+<script src='/static/accounts/published_note.js'></script>
+<script>
+        var username = "{{ username }}";
+        var uuid = "{{ uuid }}";
+        var text = "{{text}}";
+        var title = "{{ title }}";
+        var category = "{{ category }}";
+</script>
+{% endblock %}
