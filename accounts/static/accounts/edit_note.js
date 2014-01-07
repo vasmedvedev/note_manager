@@ -74,8 +74,6 @@ Ext.onReady(function(){
         buttons: [{
             text: 'Submit',
             handler: function() {
-                console.log(username);
-                console.log(uuid);
                 simple.getForm().standardSubmit=true;
                 simple.getForm().submit();
             }
