@@ -1,6 +1,5 @@
 from django.shortcuts import render_to_response, render
 from django.contrib.auth import authenticate, login
-#from django.contrib.auth.views import logout
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponseForbidden
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.csrf import csrf_protect
