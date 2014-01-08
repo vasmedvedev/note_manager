@@ -9,10 +9,10 @@
 </div>
 <script src='/static/accounts/published_note.js'></script>
 <script>
-        var username = "{{ username }}";
+        var username = "{{ username | escapejs}}";
         var uuid = "{{ uuid }}";
         var text = "{{ text | escapejs }}";
-        var title = "{{ title }}";
+        var title = "{{ title | escapejs}}";
         var category = "{{ category }}";
 </script>
 {% endblock %}

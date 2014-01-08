@@ -2,7 +2,7 @@
 {% block title %}Home Page{% endblock %}
 {% block head %}
 <script src='/static/accounts/home.js'></script>
-<script>var username = "{{ username }}";</script>
+<script>var username = "{{ username | escapejs}}";</script>
 <style type=text/css>
 
         .x-action-col-cell img.filled {

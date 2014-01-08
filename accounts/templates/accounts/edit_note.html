@@ -2,7 +2,7 @@
 {% block title %}Edit note{% endblock %}
 {% block head %}
 <script src='/static/accounts/edit_note.js'></script>
-<script>var username = "{{ username }}";
+<script>var username = "{{ username | escapejs}}";
         var uuid = "{{ uuid }}";
         var text = "{{ text | escapejs}}";
         var title = "{{ title| escapejs }}";
