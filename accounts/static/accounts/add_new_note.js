@@ -44,7 +44,7 @@ Ext.onReady(function(){
             },
             {      
                 fieldLabel: 'Text (300 symbols max)',
-                xtype: 'textarea',
+                xtype: 'htmleditor',
                 maxLength: 300,
                 enforceMaxLength : true,
                 name: 'text',

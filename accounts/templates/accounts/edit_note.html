@@ -4,8 +4,8 @@
 <script src='/static/accounts/edit_note.js'></script>
 <script>var username = "{{ username }}";
         var uuid = "{{ uuid }}";
-        var text = "{{text}}";
-        var title = "{{ title }}";
+        var text = "{{ text | escapejs}}";
+        var title = "{{ title| escapejs }}";
         var category = "{{ category }}";
 </script>
 {% endblock %}
