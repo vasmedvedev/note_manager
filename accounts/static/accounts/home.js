@@ -38,12 +38,13 @@ var grid = new Ext.grid.GridPanel({
           },
           store: mystore,
           columns:[
-                  {header: 'Title', dataIndex: 'title', width: 100, filterable: true, filter: {type:'string'} },
+                  {header: 'Title', dataIndex: 'title', width: 100},
                   {header: 'Category', dataIndex: 'category', sortable: true},
                   {header: 'Created', renderer : Ext.util.Format.dateRenderer('d/m/Y'), dataIndex: 'created_datetime', sortable: true},
                   {header: 'Text', width: 300, dataIndex:'text'},
                   {xtype: 'actioncolumn',
-                    width: 80,
+                    header: 'Actions',
+                    width: 90,
                     sortable: true,
                     dataIndex: 'favorite',
                     items: [{
@@ -140,9 +141,18 @@ var grid = new Ext.grid.GridPanel({
                             document.body.appendChild(form);
                             form.submit();
                          }
-
+                        },
+                        {
+                        icon:'../static/accounts/earth.png',
+                        iconAlign: 'top',
+                        handler: function (grid,rowIndex,colIndex){
+                            var rec = mystore.getAt(rowIndex);
+                            Ext.MessageBox.alert('Info', 'Direct link to note is http://37.192.248.30:8000/accounts/note/' + rec.get('uuid'));
+                        }
+            
                     }]
-                  }],
+
+             }],
           bbar: new Ext.PagingToolbar({
             pageSize: 25,
             store: mystore,
@@ -220,6 +230,5 @@ var grid = new Ext.grid.GridPanel({
           })
 })
 grid.render('notes');
-console.log(mystore.created_datetime);
       })
 
