@@ -9,7 +9,7 @@ var filters = {
 var mystore = new Ext.data.JsonStore({
         idProperty: 'pk',
         storeId: 'myStore',
-        url:'ajax',
+        url:'get_user_notes',
         type:'ajax',
         root:'notes',
         baseParams:{

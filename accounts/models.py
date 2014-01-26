@@ -14,21 +14,16 @@ class Notes(models.Model):
         ('TD', 'To do'),
     )
     note_id = models.AutoField(primary_key=True)
-    owner = models.CharField(max_length=100)
-    title = models.CharField(max_length=100)
-    text = models.CharField(max_length=300)
+    owner = models.CharField(max_length=100, blank=False)
+    title = models.CharField(max_length=100, blank=False)
+    text = models.CharField(max_length=300, blank=False)
     created_datetime = models.DateTimeField('date created',auto_now_add=True)
-    category = models.CharField(max_length=2, choices=CATEGORIES)
+    category = models.CharField(max_length=2, choices=CATEGORIES, blank=False)
     favorite = models.BooleanField()
-    uuid = models.CharField(max_length=100)
-    published = models.BooleanField()
+    uuid = models.CharField(max_length=100, blank=False)
+    published = models.BooleanField(blank=False)
     def __unicode__(self):
         return self.title
 
-#class Categories(models.Model):
-#    category_id = models.IntegerField()
-#    description = models.CharField(max_length=20)
-#    def __unicode__(self):
-#        return self.description
 
 

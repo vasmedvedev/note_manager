@@ -3,11 +3,11 @@ Ext.onReady(function(){
         title: category + ' ' + title,
         renderTo: 'published_note',
         width:400,
-        height: 60,
+        height: 200,
         style: {
-        "margin": 'auto',
-        "margin-top": '200px',
-        "text-align": 'center'
+            "margin": 'auto',
+            "margin-top": '200px',
+            "text-align": 'center'
         },
         layout: 'hbox',
         layoutConfig: {
