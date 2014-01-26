@@ -1,8 +1,1 @@
-This is the test task "Note manager" for Vasily Medvedev
-
 Demo is available at http://37.192.248.30:8000/accounts
-
-Known issues:
-
-1) Sometimes 403 strikes because of CSRF token, despite of decorators
-2) Filter does not work with date
